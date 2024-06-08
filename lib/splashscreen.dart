@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:easy_splash_screen/easy_splash_screen.dart';
-import 'package:splashscreen1/homepage.dart';
+//import 'package:splashscreen1/homepage.dart';
+import 'loginScreen.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -20,7 +21,7 @@ class _SplashscreenState extends State<Splashscreen> {
       loaderColor: Colors.white,
       loadingText: Text('loading...',
       style: TextStyle(color: Colors.white, fontSize: 20),),
-      navigator: Homepage(),
+      navigator: LoginPage(),
       durationInSeconds: 4,
 
     );
