@@ -19,18 +19,46 @@ class _HomepageState extends State<Homepage> {
         backgroundColor:Colors.blueGrey,
         title: const Text('kicks soles'),
         ),  
-      body: Container(
-        //alignment:Alignment.center,
-        height: 60,width:double.infinity,
-        padding: EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(10)),
-        //color: Colors.white,
-        child: Text('Hello lets find some fresh kicks for you Authentic Kicks: Guaranteed Quality & Fast Shipping.',
-        style: TextStyle(fontSize: 15 ,fontWeight: FontWeight.bold),
+      body: Column(
+        children: [
+          Container(
+        child: const ListTile(
+          
+          leading: Icon(Icons.person),
+          trailing: Icon(Icons.menu),
         ),
         ),
+        const SizedBox(height: 10,),
+          Container(
+            //alignment:Alignment.center,
+            height: 60,width:double.infinity,
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10)),
+            //color: Colors.white,
+           child: Text.rich(
+    TextSpan(
+      children: [
+        TextSpan(
+          text: 'Hello lets find some fresh kicks for you ',
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
+        ),
+        TextSpan(
+          text: 'Authentic Kicks: ',
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.blue),
+        ),
+        TextSpan(
+          text: 'Guaranteed Quality & Fast Shipping.',
+          style: TextStyle(fontSize: 15, fontWeight: FontWeight.normal),
+        ),
+      ],
+    ),
+  ),
+            ),
+        ],
+      ),
+       
         //bottomNavigationBar
       bottomNavigationBar: const GNav(
         padding: EdgeInsets.all(7),
