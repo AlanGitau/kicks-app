@@ -24,8 +24,8 @@ class _HomepageState extends State<Homepage> {
           Container(
         child: const ListTile(
           
-          leading: Icon(Icons.person),
-          trailing: Icon(Icons.menu),
+          leading: Icon(Icons.menu),
+          trailing: Icon(Icons.person),
         ),
         ),
         const SizedBox(height: 10,),
@@ -33,6 +33,7 @@ class _HomepageState extends State<Homepage> {
             //alignment:Alignment.center,
             height: 60,width:double.infinity,
             padding: EdgeInsets.all(10),
+            margin: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10)),
