@@ -14,8 +14,8 @@ class _SplashscreenState extends State<Splashscreen> {
   @override
   Widget build(BuildContext context) {
     return  EasySplashScreen(
-      //logo: Image.network('https://images-platform.99static.com//PsaKSJv3b_Y-k5m2GVF1ODlcI6A=/237x20:787x570/fit-in/500x500/99designs-contests-attachments/47/47413/attachment_47413581'),
-      logo:Image.asset('Deliveryman Riding scooter.gif'),
+      logo: Image.network('https://images-platform.99static.com//PsaKSJv3b_Y-k5m2GVF1ODlcI6A=/237x20:787x570/fit-in/500x500/99designs-contests-attachments/47/47413/attachment_47413581'),
+      //logo:Image.asset('Deliveryman Riding scooter.gif'),
       backgroundColor:Colors.orangeAccent,
       logoWidth: 100,
       showLoader: true,

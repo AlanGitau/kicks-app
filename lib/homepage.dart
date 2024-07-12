@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
+import 'components/bottomnavbar.dart';
+
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
@@ -14,20 +16,14 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey.shade300,
       appBar:AppBar(
         backgroundColor:Colors.blueGrey,
         title: const Text('kicks soles'),
         ),  
       body: Column(
         children: [
-          Container(
-        child: const ListTile(
-          
-          leading: Icon(Icons.menu),
-          trailing: Icon(Icons.person),
-        ),
-        ),
+         
         const SizedBox(height: 10,),
           Container(
             //alignment:Alignment.center,
@@ -61,28 +57,7 @@ class _HomepageState extends State<Homepage> {
       ),
        
         //bottomNavigationBar
-      bottomNavigationBar: const GNav(
-        padding: EdgeInsets.all(7),
-        gap:8,
-        backgroundColor: Colors.blueGrey,
-        tabs: [
-          GButton(
-            icon: Icons.home,
-            text: 'Home',
-            ),
-          GButton(
-            icon: Icons.favorite,
-            text: 'Favourite',
-            ),
-          GButton(
-            icon: Icons.settings,
-            text: 'Settings',
-            ),
-          GButton(
-            icon: Icons.account_circle,
-            text: 'Profile',
-            ),
-        ]),
+      bottomNavigationBar: const Bottomnavbar(),
         
       );
       
