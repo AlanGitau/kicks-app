@@ -33,7 +33,7 @@ class _HomepageState extends State<Homepage> {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.lightBlue.shade100,
         title: const Text('kicks soles'),
         leading: Builder(
           builder: (context) {
@@ -46,6 +46,8 @@ class _HomepageState extends State<Homepage> {
           },
         ),
       ),
+
+      //side drawer
       drawer: Drawer(
         backgroundColor: Colors.grey.shade900,
         child: Column(
