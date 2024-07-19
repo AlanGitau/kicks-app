@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'models.dart';
 
 class Shop extends StatefulWidget {
   const Shop({super.key});
@@ -92,7 +94,6 @@ class _ShopState extends State<Shop> {
                             //add functionality later
                           }, child:Text('shop now',
                           style: TextStyle(color: Colors.white),
-            
                             )
                           ),
                         ],
@@ -103,8 +104,33 @@ class _ShopState extends State<Shop> {
               ),
             ),
           ),
+          Container(
+            height: 150,
+            child: ListView.builder(
+              itemCount: shoeCategories.length,
+              itemBuilder: (context,Index){
+                final Category = shoeCategories[Index];
+                return yourCategoryTile(Category);
+              }
+              ),
+          )
         ],
       ),
     );
   }
 }
+
+Widget yourCategoryTile(ShoeCategory category) {
+    return Row(
+      children: [
+        CircleAvatar(
+          backgroundImage: NetworkImage(category.imageUrl),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(category.name),
+        ),
+        // Add additional information widgets here (optional)
+      ],
+    );
+  }
