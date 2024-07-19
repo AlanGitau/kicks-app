@@ -107,6 +107,7 @@ class _ShopState extends State<Shop> {
           Container(
             height: 150,
             child: ListView.builder(
+              scrollDirection: Axis.horizontal,
               itemCount: shoeCategories.length,
               itemBuilder: (context,Index){
                 final Category = shoeCategories[Index];
@@ -121,16 +122,18 @@ class _ShopState extends State<Shop> {
 }
 
 Widget yourCategoryTile(ShoeCategory category) {
-    return Row(
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+    child: Column(
+      mainAxisSize: MainAxisSize.min,
       children: [
         CircleAvatar(
           backgroundImage: NetworkImage(category.imageUrl),
+          radius: 30, // Adjust this value as needed
         ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(category.name),
-        ),
-        // Add additional information widgets here (optional)
+        SizedBox(height: 4),
+        Text(category.name, style: TextStyle(fontSize: 12)),
       ],
-    );
-  }
+    ),
+  );
+}
