@@ -13,3 +13,23 @@ const List<ShoeCategory> shoeCategories = [
   ShoeCategory(imageUrl: 'https://seeklogo.com/images/V/vans-logo-C9E618A891-seeklogo.com.png', name: 'Vans'),
   ShoeCategory(imageUrl: 'https://thumbnail.imgbin.com/9/7/13/imgbin-crocs-logo-calvin-klein-fashion-logo-QXwNTQyX67H4eM5dNQuwnWmhY_t.jpg', name: 'Crocs'),
 ];
+
+//model to display a list of different shoes
+class Shoe {
+  final String imageUrl;
+  final String name;
+  final double price;
+
+   Shoe({
+    required this.imageUrl,
+    required this.name,
+    required this.price,
+  });
+  }
+
+   List<Shoe> shoes =[
+    Shoe(imageUrl: 'https://images.stockx.com/images/Air-Jordan-4-Retro-Black-Cat-2020-PS-Product.jpg?fit=fill&bg=FFFFFF&w=140px&h=75px&fm=webp&auto=compress&dpr=2&trim=color&updated_at=1651518954&q=60',name:'Black cats',price:100.00),
+    Shoe(imageUrl: 'https://images.stockx.com/images/Nike-Dunk-Low-Anthracite-Pure-Platinum-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1700169024',name:'Nike low dunk Anthracite',price:100.00),
+  ]; 
+
+

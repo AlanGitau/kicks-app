@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'models.dart';
 
 class Shop extends StatefulWidget {
@@ -114,7 +115,10 @@ class _ShopState extends State<Shop> {
                 return yourCategoryTile(Category);
               }
               ),
-          )
+          ),
+          Expanded(
+            child: ShoeList()),
+
         ],
       ),
     );
@@ -134,6 +138,60 @@ Widget yourCategoryTile(ShoeCategory category) {
         SizedBox(height: 4),
         Text(category.name, style: TextStyle(fontSize: 12)),
       ],
+    ),
+  );
+}
+
+class ShoeList extends StatelessWidget {
+  const ShoeList({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: shoes.length,
+      itemBuilder: (context, index) {
+        return ShoeItem(shoes[index]);
+      },
+    );
+  }
+}
+
+Widget ShoeItem(Shoe shoe) {
+  return Padding(
+    padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+    child: Card(
+      elevation: 2.0,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12.0),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListTile(
+          leading: ClipRRect(
+            borderRadius: BorderRadius.circular(8.0),
+            child: Image.network(
+              shoe.imageUrl,
+              width: 60,
+              height: 60,
+              fit: BoxFit.cover,
+            ),
+          ),
+          title: Text(
+            shoe.name,
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
+          subtitle: Text(
+            '\$${shoe.price.toStringAsFixed(2)}',
+            style: TextStyle(color: Colors.green),
+          ),
+          trailing: IconButton(
+            icon: Icon(Icons.add_shopping_cart),
+            onPressed: () {
+              // Add to cart functionality
+            },
+          ),
+        ),
+      ),
     ),
   );
 }
