@@ -106,7 +106,7 @@ class _ShopState extends State<Shop> {
             ),
           ),
           Container(
-            height: 150,
+            height: 140,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: shoeCategories.length,
@@ -168,10 +168,10 @@ Widget ShoeItem(Shoe shoe) {
         padding: const EdgeInsets.all(8.0),
         child: ListTile(
           leading: ClipRRect(
-            borderRadius: BorderRadius.circular(8.0),
+            borderRadius: BorderRadius.circular(10.0),
             child: Image.network(
               shoe.imageUrl,
-              width: 60,
+              width: 100,
               height: 60,
               fit: BoxFit.cover,
             ),

@@ -15,6 +15,7 @@ class _ProfileState extends State<Profile> {
     return  Scaffold(
       body:Column(
         children: [
+          //LIST TILE DO DISPLAY EMAIL AND EDIT ACCOUNT
            Padding(
              padding: const EdgeInsets.all(15.0),
              child: ListTile(
@@ -28,11 +29,29 @@ class _ProfileState extends State<Profile> {
               trailing: IconButton(
                 icon:Icon(Icons.edit) ,
                 onPressed:(){
-             
+             //should implement functionality
                 },
                 ),
              ),
            ),
+           SizedBox(height:10),
+
+           ListTile(
+             leading: Icon(Icons.map_outlined),
+             title: Text('Location Address'),
+           ),
+           ListTile(
+             leading: Icon(Icons.history),
+             title: Text('Order History'),
+           ),
+           ListTile(
+             leading: Icon(Icons.credit_card),
+             title: Text('Payment Information'),
+           ),
+           ListTile(
+             leading: Icon(Icons.delete_forever),
+             title: Text('Delete Account'),
+           )
            
         ],
       ),
