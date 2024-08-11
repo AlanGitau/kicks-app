@@ -21,7 +21,7 @@ class BottomNavBar extends StatelessWidget {
           padding: EdgeInsets.all(7),
           gap: 8,
           backgroundColor: Color.fromARGB(255, 223, 213, 213),
-          tabBackgroundColor: Colors.grey,
+          tabBackgroundColor: Colors.lightBlue.shade50,
           selectedIndex: selectedIndex,
           onTabChange: onTabChange,
           tabs: [
