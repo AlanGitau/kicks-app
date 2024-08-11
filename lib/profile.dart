@@ -39,18 +39,38 @@ class _ProfileState extends State<Profile> {
            ListTile(
              leading: Icon(Icons.map_outlined),
              title: Text('Location Address'),
+             onTap:(){
+              //should implement functionality
+             }
            ),
+
+           SizedBox(height:10),
+
            ListTile(
              leading: Icon(Icons.history),
              title: Text('Order History'),
+             onTap:(){
+              //should implement functionality
+             }
            ),
+
+           SizedBox(height:10),
+
            ListTile(
              leading: Icon(Icons.credit_card),
              title: Text('Payment Information'),
+             onTap:(){
+              //should implement functionality
+             }
            ),
+           SizedBox(height:10),
+
            ListTile(
              leading: Icon(Icons.delete_forever),
              title: Text('Delete Account'),
+             onTap:(){
+              //should implement functionality
+             }
            )
            
         ],

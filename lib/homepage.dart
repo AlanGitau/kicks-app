@@ -49,13 +49,15 @@ class _HomepageState extends State<Homepage> {
 
       //side drawer
       drawer: Drawer(
-        backgroundColor: Colors.grey.shade900,
+        backgroundColor: Colors.grey.shade100,
         child: Column(
           children: [
             DrawerHeader(
               child: Image.network(
                 'https://pngimg.com/uploads/nike/nike_PNG11.png',
-                color: Colors.pink.shade50,
+                color: Colors.black,
+                width:150,
+                height: 130,
               ),
             ),
             const Padding(
@@ -65,22 +67,36 @@ class _HomepageState extends State<Homepage> {
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(Icons.home, color: Colors.white),
-                title: Text('Home', style: TextStyle(color: Colors.white)),
+                leading: Icon(Icons.home, color: Colors.black),
+                title: Text('Home', style: TextStyle(color: Colors.black)),
+              ),
+            ),
+             const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Icon(Icons.help_outline_sharp, color: Colors.black),
+                title: Text('Help & support', style: TextStyle(color: Colors.black)),
+              ),
+            ),
+             const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: ListTile(
+                leading: Icon(Icons.info_outline, color: Colors.black),
+                title: Text('About us ', style: TextStyle(color: Colors.black)),
               ),
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(Icons.settings, color: Colors.white),
-                title: Text('settings', style: TextStyle(color: Colors.white)),
+                leading: Icon(Icons.settings, color: Colors.black),
+                title: Text('settings', style: TextStyle(color: Colors.black)),
               ),
             ),
             const Padding(
               padding: EdgeInsets.all(8.0),
               child: ListTile(
-                leading: Icon(Icons.logout_rounded, color: Colors.white),
-                title: Text('Logout', style: TextStyle(color: Colors.white)),
+                leading: Icon(Icons.logout_rounded, color: Colors.black),
+                title: Text('Logout', style: TextStyle(color: Colors.black)),
               ),
             ),
           ],
